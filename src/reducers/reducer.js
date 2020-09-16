@@ -19,7 +19,7 @@ import {
         case TOGGLE:
             return {...state , isVisible:!state.isVisible}
         case EDIT:
-                return {...state , todos:[state.todos.map((el,i)=>i===action.index?{...el,task:action.text}:el)]}
+                return {...state , todos:state.todos.map((el,i)=>i===action.index?{...el,task:action.text}:el)}
      default:
         return state;
     }
